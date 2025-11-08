@@ -1,0 +1,54 @@
+def main_menu():
+    print("Spesial DiKotamu")
+    print("1. 7GB/5hr/20rb")
+    print("2. 3GB/3hr/10rb")
+    print("3. Facebook 1GB/1hr")
+    print("5. Lainnya")
+    pilihan = input("Pilih menu (1-5): ")
+
+    if pilihan == "5":
+        rekomendasi_paket()
+    else:
+        print("Paket belum tersedia.")
+        main_menu()
+
+def rekomendasi_paket():
+    print("\nRekomendasi Paket")
+    print("1. 30GB/28hr/80rb")
+    print("2. 35GB/28hr/85rb")
+    print("3. 36GB/30hr/95rb")
+    print("4. 2Gb/27Hr/30rb")
+    print("5. 13GB/7hr/30rb")
+    print("6. FLASH SALE")
+    print("7. Super Seru")
+    print("10. HOT PROMO")
+    print("11. Serbu")
+    print("8. Next")
+    pilihan = input("Pilih paket: ")
+
+    if pilihan == "7":
+        konfirmasi()
+    else:
+        print("Paket belum tersedia.")
+        rekomendasi_paket()
+
+def konfirmasi():
+    print("\nAnda akan membeli Paket Super Seru 30GB Intert/28 hr Rp80000?")
+    print("1. Beli")
+    print("9. Back")
+    pilihan = input("Pilihan: ")
+
+    if pilihan == "1":
+        proses_pembelian()
+    else:
+        print("Pembelian dibatalkan.")
+        exit()
+
+def proses_pembelian():
+    # Untuk memunculkan pop up update kuota dan tanggal expired
+    print("\nPembelian paket Anda sedang diproses...")
+    print("Selamat! Paket Anda berhasil diaktifkan!")
+    print("Kuota: 30GB | Masa AKtif: 28 hari")
+    print("Terima kasih telah menggunakan layanan kami.")
+
+main_menu()
